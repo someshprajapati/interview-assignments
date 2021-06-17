@@ -22,7 +22,7 @@ Python 2 should be installed.
 3. Use the below help menu to perform different action based on your requirement.
 
 ```
-$ python log_parser.py -h
+SOMESH~[log_parser (main)]-$ python log_parser.py -h
 usage: log_parser.py [-h]
                      {top-requested-pages-count,successful-requests,unsuccessful-requests,top-unsuccessful-pages-count,top-requested-host-count,top-host-requested-page}
                      ...
@@ -46,6 +46,19 @@ Log Parser:
                         Top [N] requested pages and the number of requests made for each host
     top-host-requested-page
                         For each of the top [N] hosts, show the top [C] pages requested and the number of requests for each
+```
+
+```
+SOMESH~[log_parser (main)]-$ python log_parser.py top-requested-host-count -h
+usage: log_parser.py top-requested-host-count [-h] -f INPUT_FILE [-d] -n COUNT_OF_TOP_REQUEST
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f INPUT_FILE, --input_file INPUT_FILE
+                        Provide the input log file to parse the logs
+  -d, --dry-run         Dry Run of all commands (do not execute) (default: False)
+  -n COUNT_OF_TOP_REQUEST, --count-of-top-request COUNT_OF_TOP_REQUEST
+                        Provide the top N count value
 ```
 
 ## We are going to perform the below actions using the log_parser script:
